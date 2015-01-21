@@ -53,7 +53,7 @@ class SolvePuzzle {
 					nextOpen.arrange[space] = nextOpen.arrange[space - 3];
 					nextOpen.arrange[space - 3] = 0;
 					
-					nextOpen.preOper = 'u';
+					nextOpen.preOper = "up";
 				}
 				//下移
 				else if(i == 1){
@@ -64,7 +64,7 @@ class SolvePuzzle {
 					nextOpen.arrange[space] = nextOpen.arrange[space + 3];
 					nextOpen.arrange[space + 3] = 0;	
 					
-					nextOpen.preOper = 'd';
+					nextOpen.preOper = "down";
 				}
 				//左移
 				else if(i == 2){
@@ -75,7 +75,7 @@ class SolvePuzzle {
 					nextOpen.arrange[space] = nextOpen.arrange[space - 1];
 					nextOpen.arrange[space - 1] = 0;	
 					
-					nextOpen.preOper = 'l';
+					nextOpen.preOper = "left";
 				}
 				//右移
 				else if(i == 3){
@@ -86,7 +86,7 @@ class SolvePuzzle {
 					nextOpen.arrange[space] = nextOpen.arrange[space + 1];
 					nextOpen.arrange[space + 1] = 0;
 					
-					nextOpen.preOper = 'r';
+					nextOpen.preOper = "right";
 				}				
 							
 				//若close表不包含nextOpen状态，那么将其加入close表
@@ -191,5 +191,5 @@ class Node implements Comparable<Node>{
 	public int[] arrange = new int[9];
 	public Node preNode;
 	public int stepts = 0;
-	public char preOper = ' ';//记录上次的操作是把空格挪到哪里
+	public String preOper = "";//记录上次的操作是把空格挪到哪里
 }

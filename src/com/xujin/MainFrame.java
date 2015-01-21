@@ -43,22 +43,12 @@ class MainFrame extends JFrame{
 		Dimension screenSize = kit.getScreenSize();
 		screenWidth = screenSize.width;
 		screenHeight = screenSize.height;
-	    this.setBounds(screenWidth / 4, screenHeight / 4, screenWidth / 2, screenHeight / 2);
+	    this.setBounds(screenWidth / 4, screenHeight / 4, screenWidth /3 *2, screenHeight / 2);
 	    
 	    //设置程序图标和程序名
 	    Image imgIcon = kit.getImage("image/icon.png");
 	    setIconImage(imgIcon);
 		setTitle("八数码游戏");
-	    
-	    
-	    //设置默认观感
-	    try{
-			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-			SwingUtilities.updateComponentTreeUI(MainFrame.this);
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
 	    
 	    
 	    //设置菜单
